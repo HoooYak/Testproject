@@ -81,7 +81,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 
 				<div class="col bx-header-contact">
 					<div class="d-flex align-items-center justify-content-between justify-content-md-center flex-column flex-sm-row flex-md-column flex-lg-row">
-						<div class="p-lg-3 p-1">
+						<div class="p-md-2 p-1">
 							<div class="bx-header-phone-block">
 								<i class="bx-header-phone-icon"></i>
 								<span class="bx-header-phone-number">
@@ -97,7 +97,7 @@ $curPage = $APPLICATION->GetCurPage(true);
 								</span>
 							</div>
 						</div>
-						<div class="p-lg-3 p-1">
+						<div class="p-md-1 p-2">
 							<div class="bx-header-worktime">
 								<div class="bx-worktime-title"><?=GetMessage('HEADER_WORK_TIME'); ?></div>
 								<div class="bx-worktime-schedule">
@@ -113,9 +113,24 @@ $curPage = $APPLICATION->GetCurPage(true);
 								</div>
 							</div>
 						</div>
+							<div class="p-md-1 p-3">
+							<div class="bx-header-worktime">
+								<p>
+									<?$APPLICATION->IncludeComponent(
+										"bitrix:main.include",
+										"",
+										array(
+											"AREA_FILE_SHOW" => "file",
+											"PATH" => SITE_DIR."include/testproj.php"
+										),
+										false
+									);?>
+						</div>
 					</div>
+					</div>
+
 				</div>
-			</div>
+			
 			<!--endregion-->
 
 			<!--region menu-->
